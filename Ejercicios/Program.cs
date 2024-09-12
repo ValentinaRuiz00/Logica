@@ -3,4 +3,8 @@ using Ejercicios;
 
 EjercicioParametro ejercicioParametro = new EjercicioParametro();
 
-ejercicioParametro.Ejercicio24();
+EjercicioCase ejercicioCase = new EjercicioCase();
+
+//ejercicioParametro.Ejercicio24();
+
+ejercicioCase.Ejercicio8();
