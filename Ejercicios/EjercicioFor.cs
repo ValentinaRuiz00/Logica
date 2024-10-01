@@ -190,20 +190,117 @@ namespace Ejercicios
 
             int[] numero1 = new int[2];
             int[] numero2 = new int[2];
+            int[] multiplicacion = new int[2];
+            int resultado = 1;
+            int resultado2 = 1;
 
             for (int contador = 0; contador < 2; contador++)
             {
-                Console.WriteLine("Ingrese el número entero");
+                Console.WriteLine("Ingrese el número entero en la posición " + (contador + 1));
                 numero1[contador] = int.Parse(Console.ReadLine());
-
-
             }
-            for (int contador = 0; contador < numero1.Length; contador++)
+
+            for (int contador = 0; contador < 2; contador++)
             {
-                Console.WriteLine(numero1[contador]);
+                Console.WriteLine("Ingrese el número entero en la posición " + (contador + 1));
+                numero2[contador] = int.Parse(Console.ReadLine());
             }
 
+            for (int contador = 0; contador < 2; contador++)
+            {
+                multiplicacion[contador] = numero1[contador] * numero2[contador];
+                Console.WriteLine("Los numeros " + numero1[contador] + " * " + numero2[contador] + " es igual a: " + multiplicacion[contador]);
+            }
 
+            for (int contador = 0; contador < 2; contador++)
+            {
+                resultado = resultado * numero1[contador];
+                resultado2 = resultado2 * numero2[contador];
+            }
+
+            Console.WriteLine("Los números " + numero1[0] + " * " + numero1[1] + " es igual a: " + resultado);
+            Console.WriteLine("Los números " + numero2[0] + " * " + numero2[1] + " es igual a: " + resultado2);
+
+        }
+
+        //devuelve si un numero es primo
+        public void Ejercicio13()
+        {
+            Console.WriteLine("Ingrese por favor un número para determinar si es primo");
+            int numero = int.Parse(Console.ReadLine());
+            bool bandera = false;
+            int residuo = 2;
+            if (numero == 1)
+            {
+                Console.WriteLine("El número ingresado debe ser mayor a uno.");
+
+            }
+
+            if (numero == 2)
+            {
+                bandera = true;
+            }
+
+            for (int contador = 0; contador < residuo; contador++)
+            {
+                if (numero % residuo == 0 && numero > 2)
+                {
+                    bandera = false;
+
+                }
+                else
+                {
+                    bandera = true;
+                }
+            }
+            if (bandera == true)
+            {
+                Console.WriteLine("El número ingresado es primo");
+            }
+            if (bandera == false)
+            {
+                Console.WriteLine("El número ingresado es compuesto");
+            }
+
+        }
+
+        //Devuelve la cantidad de vocales
+        public void Ejercicio14()
+        {
+            Console.WriteLine("Ingrese por favor una cadena de texto");
+            string cadena = Console.ReadLine();
+            int cantidad = 0;
+
+            for (int contador = 0; contador < cadena.Length; contador++)
+            {
+                char letra = cadena[contador];
+                if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u' ||
+                    letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U')
+                {
+                    cantidad++;
+                }
+            }
+            Console.WriteLine(cantidad);
+        }
+
+        //devuelve una cadena invertida
+        public void Ejercicio15()
+        {
+            Console.WriteLine("Ingrese por favor una cadena");
+            string cadena= Console.ReadLine();
+            char[] caracteres = cadena.ToCharArray();
+            int UltLetra = cadena.Length - 1;
+
+            for (int contador = 0; contador < UltLetra; contador++)
+            {
+                char temp = caracteres[contador];
+                caracteres[contador] = caracteres[UltLetra - contador];
+                caracteres[UltLetra - contador] = temp;
+            }
+
+            string cadenaInvertida = new string(caracteres);
+
+            Console.WriteLine(cadenaInvertida);
         }
 
 

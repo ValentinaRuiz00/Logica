@@ -11,4 +11,4 @@ EjercicioFor ejercicioFor=new EjercicioFor();
 
 //ejercicioCase.Ejercicio8();
 //ejercicioWhile.Ejercicio19();
-ejercicioFor.Ejercicio12();
+ejercicioFor.Ejercicio15();
